@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+.topnav {
+    background-color: #0D1B2A;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.topnav span {
+    text-decoration: none;
+    color: #E0E0E0;
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    display: block;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+/* Search input styling - keeps dark theme when typing */
+#query {
+    font: 15px system-ui;
+    height: 43px;
+    width: 300px;
+    padding: 0 15px;
+    background-color: #1B263B !important;
+    color: #E0E0E0 !important;
+    border: none;
+    border-radius: 11px;
+    outline: none;
+}
+
+/* Force dark background when focused/active */
+#query:focus,
+#query:active {
+    background-color: #1B263B !important;
+    color: #E0E0E0 !important;
+}
+
+/* Fix browser autocomplete styling */
+#query:-webkit-autofill,
+#query:-webkit-autofill:hover,
+#query:-webkit-autofill:focus,
+#query:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #1B263B inset !important;
+    -webkit-text-fill-color: #E0E0E0 !important;
+}
+
+/* Placeholder color */
+#query::placeholder {
+    color: #9AA5B1 !important;
+    opacity: 1;
+}
+
+form {
+    float: right;
+    background-color: #1B263B;
+    width: 300px;
+    height: 43px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    font: 15px system-ui;
+    color: #1B263B;
+    height: 100%; width: 100%;
+    padding: 16px 9px;
+}
+
+body {
+    background-color: #0A0A0A;
+    font-family: sans-serif;
+    color: white;
+}
+
+.thumbnail {
+    height: 300px;
+    width: 250px;
+    border-radius: 19px;
+    -webkit-border-radius: 19px;
+    -moz-border-radius: 19px;
+    -ms-border-radius: 19px;
+    -o-border-radius: 19px;
+}
+
+.col {
+    flex: 0 0 25%; /* Don't grow, don't shrink, start at 25% */
+    max-width: 25%;
+    padding: 10px 19px;
+    margin-bottom: 20px;
+}
+
+.card {
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #1B263B;
+    width: 300px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -19px; /* Compensate for col padding */
+}
+
+/* Clear floats */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Button styling to match your dark theme */
+.save-btn, .edit-btn, .delete-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.save-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+}
+
+.edit-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* Input styling for review forms */
+#new_rev, #new_user {
+    width: 100%;
+    padding: 8px 12px;
+    margin: 5px 0;
+    background-color: #1B263B;
+    color: #E0E0E0;
+    border: 1px solid #415a77;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#new_rev:focus, #new_user:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #1B263B;
+}
+
+/* Dynamic input styling for edit forms */
+input[id^="review"], input[id^="user"] {
+    width: 100%;
+    padding: 8px 12px;
+    margin: 5px 0;
+    background-color: #1B263B;
+    color: #E0E0E0;
+    border: 1px solid #415a77;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[id^="review"]:focus, input[id^="user"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
